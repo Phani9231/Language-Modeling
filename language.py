@@ -151,8 +151,7 @@ def buildUnigramProbs(unigrams, unigramCounts, totalCount):
     newlst=[]
     for words in unigrams:
         if words in unigramCounts:
-            val=unigramCounts[words]
-            num=val/totalCount
+            num=unigramCounts[words]/totalCount
             newlst.append(num)
         else:
             newlst.append(0)
