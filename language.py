@@ -82,8 +82,11 @@ Parameters: 2D list of strs
 Returns: list of strs
 '''
 def getStartWords(corpus):
-    return
-
+    newlst=[]
+    for i in corpus:
+        if i[0] not in newlst:
+            newlst.append(i[0])
+    return newlst
 
 '''
 countStartWords(corpus)
@@ -92,7 +95,13 @@ Parameters: 2D list of strs
 Returns: dict mapping strs to ints
 '''
 def countStartWords(corpus):
-    return
+    newdict={}
+    for i in corpus:
+        if i[0] not in newdict:
+            newdict[i[0]]=1
+        else:
+            newdict[i[0]]+=1
+    return newdict
 
 
 '''
